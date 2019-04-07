@@ -1,0 +1,25 @@
+function getGrade(){
+grades={"80-100":"A","79-70":"B","69-60":"C","50-59":"D","0-40":"E","Anything else":"F"}
+
+switch (grades){
+   
+ case marks:
+console.log
+
+break;
+  
+
+  case grades:
+
+console.log("A");
+
+break;
+
+console.log("84 A");
+}
+}
+
+undefined
+
+getGrade(84);
+VM472:8 A

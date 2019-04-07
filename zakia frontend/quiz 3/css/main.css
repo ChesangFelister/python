@@ -1,0 +1,139 @@
+body {
+	background-color: red;
+
+}
+
+.container{
+	margin: 0 auto;
+	width: 1000px;
+	background-color: #fff;
+	padding: 20px;
+	overflow: auto;
+}
+
+.panel{
+    float: left;
+    text-align: center; 
+    min-height: 100px;
+
+}
+
+
+.one{
+    background-color: blue;
+    width: 500px;
+}
+.two{
+	background-color: purple;
+	width: 500px;
+}
+
+.three{
+	background-color: skyblue;
+	width: 1000px;
+}
+
+.four{
+	background-color: pink;
+	width: 250px;
+}
+
+.five{
+	background-color: violet;
+	width: 250px;
+}
+
+.six{
+	background-color: red;
+	width: 250px;
+}
+
+.seven{
+	background-color: black;
+	width: 250px;
+}
+
+.eight{
+	background-color: blue;
+	width: 33.33%;
+}
+
+.nine{
+	background-color: green;
+	width: 33.33%;
+}
+
+
+.ten{
+	background-color: purple;
+	width: 33.33%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
