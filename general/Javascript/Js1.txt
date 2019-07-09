@@ -1,0 +1,11 @@
+undefined means “no value”. Uninitialized variables are undefined:
+    > var foo;
+    undefined
+If you read a non-existant property, you also get undefined:
+    > obj.foo
+    undefined
+Missing parameters are undefined, too:
+    > f()
+    undefined
+null means “no object”. 
+It is used as a non-value when an object is expected (parameters, last in a chain of objects, etc.).

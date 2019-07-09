@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+  <link rel="dns-prefetch" href="https://github.githubassets.com/">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com/">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-G5IW3QX9jLeIufJaob0LkBXhXTZSiWUoXGNTvU9KgK4dfhMjKB3hfAy9hjsk5YYoN0GA3b0yekVqlMA5EYlDDA==" rel="stylesheet" href="./js_files/frameworks-c567bfeb1cb9f4ac89533a5e03dbe623.css">
+  <link crossorigin="anonymous" media="all" integrity="sha512-F78ReIkWEi73z2OeDUjR/kDUzoE7GM1F3PKwFm0rYyX3oYT/G7C3bHIYprvyLGxeNPWeqWHu82mZrEhpBNpjxA==" rel="stylesheet" href="./js_files/site-71c0e1058fc31e6523c835f51df7bbcb.css">
+    <link crossorigin="anonymous" media="all" integrity="sha512-VS6jGMMXbLgjzXqc7dd2zzflKDnjsic5NVccSO5O6++CIhVrqUlBV6Rqg7IPmnKx6LIXFpWocYuNLN/lMxA4rA==" rel="stylesheet" href="./js_files/github-1860a928dbe8e9dd29ca8a49d5948455.css">
+    
+    
+    
+    
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>You-Dont-Know-JS/ch1.md at master · getify/You-Dont-Know-JS · GitHub</title>
+    <meta name="description" content="A book series on JavaScript. @YDKJS on twitter. Contribute to getify/You-Dont-Know-JS development by creating an account on GitHub.">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta property="og:image" content="https://avatars0.githubusercontent.com/u/150330?s=400&amp;v=4"><meta property="og:site_name" content="GitHub"><meta property="og:type" content="object"><meta property="og:title" content="getify/You-Dont-Know-JS"><meta property="og:url" content="https://github.com/getify/You-Dont-Know-JS"><meta property="og:description" content="A book series on JavaScript. @YDKJS on twitter. Contribute to getify/You-Dont-Know-JS development by creating an account on GitHub.">
+
+  <link rel="assets" href="https://github.githubassets.com/">
+  
+  <meta name="pjax-timeout" content="1000">
+  
+  <meta name="request-id" content="E663:F06D:64B10E:94077F:5C8AFF8B" data-pjax-transient="">
+
+
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient="">
+
+      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+  <meta name="octolytics-host" content="collector.githubapp.com"><meta name="octolytics-app-id" content="github"><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event"><meta name="octolytics-dimension-request_id" content="E663:F06D:64B10E:94077F:5C8AFF8B"><meta name="octolytics-dimension-region_edge" content="ams"><meta name="octolytics-dimension-region_render" content="iad">
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true">
+
+
+
+    <meta name="google-analytics" content="UA-3769691-2">
+
+
+<meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="NWE4OGYxNDUyOTBiYWJjMjZjNjUyZjNhYTA1NDQzZGIxYmQ0NjI4NmU5OTliNTNlYWJjYTg4MWVlNzFmNTAzMnx7InJlbW90ZV9hZGRyZXNzIjoiMTk3LjIzMi4yOS45OCIsInJlcXVlc3RfaWQiOiJFNjYzOkYwNkQ6NjRCMTBFOjk0MDc3Rjo1QzhBRkY4QiIsInRpbWVzdGFtcCI6MTU1MjYxMzI1OSwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+
+    <meta name="enabled-features" content="UNIVERSE_BANNER,MARKETPLACE_SOCIAL_PROOF,MARKETPLACE_PLAN_RESTRICTION_EDITOR,MARKETPLACE_BROWSING_V2">
+
+  <meta name="html-safe-nonce" content="a8f1ed02f8eae8af4c548d6f67b057c0467c694e">
+
+  <meta http-equiv="x-pjax-version" content="33841535c3cce1814b89ab918bbfc5cd">
+  
+
+      <link href="https://github.com/getify/You-Dont-Know-JS/commits/master.atom" rel="alternate" title="Recent Commits to You-Dont-Know-JS:master" type="application/atom+xml">
+
+  <meta name="go-import" content="github.com/getify/You-Dont-Know-JS git https://github.com/getify/You-Dont-Know-JS.git">
+
+  <meta name="octolytics-dimension-user_id" content="150330"><meta name="octolytics-dimension-user_login" content="getify"><meta name="octolytics-dimension-repository_id" content="14440270"><meta name="octolytics-dimension-repository_nwo" content="getify/You-Dont-Know-JS"><meta name="octolytics-dimension-repository_public" content="true"><meta name="octolytics-dimension-repository_is_fork" content="false"><meta name="octolytics-dimension-repository_network_root_id" content="14440270"><meta name="octolytics-dimension-repository_network_root_nwo" content="getify/You-Dont-Know-JS"><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false">
+
+
+    <link rel="canonical" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md" data-pjax-transient="">
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+  <meta name="u2f-support" content="true">
+
+
+  <link rel="manifest" href="https://github.com/manifest.json" crossorigin="use-credentials">
+
+  </head>
+
+  <body class="logged-out env-production page-blob">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#start-of-content" tabindex="1" class="px-2 py-4 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+        
+<header class="Header header-logged-out  position-relative f4 py-3" role="banner">
+  <div class="container-lg d-flex px-3">
+    <div class="d-flex flex-justify-between flex-items-center">
+        <a class="mr-4" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+          <svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+        </a>
+    </div>
+
+    <div class="HeaderMenu HeaderMenu--logged-out d-flex flex-justify-between flex-items-center flex-auto">
+      <div class="d-none">
+        <button class="btn-link js-details-target" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <svg height="24" class="octicon octicon-x text-gray" viewBox="0 0 12 16" version="1.1" width="18" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+        </button>
+      </div>
+
+        <nav class="mt-0" aria-label="Global">
+          <ul class="d-flex list-style-none">
+              <li class=" mr-3 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
+                <details class="HeaderMenu-details details-overlay details-reset width-full">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap  d-inline-block">
+                    Why GitHub?
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
+                      <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 mt-0  p-4 left-n4 position-absolute">
+                    <a href="https://github.com/features" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Features">Features <span class="Bump-link-symbol float-right text-normal text-gray-light">→</span></a>
+                    <ul class="list-style-none f5 pb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/features/code-review/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code review">Code review</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features/project-management/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Project management">Project management</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features/integrations" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Integrations">Integrations</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features/actions" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Actions">Actions</a>
+                      </li><li class="edge-item-fix"><a href="https://github.com/features#team-management" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Team management">Team management</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features#social-coding" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Social coding">Social coding</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features#documentation" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Documentation">Documentation</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features#code-hosting" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code hosting">Code hosting</a></li>
+                    </ul>
+
+                    <ul class="list-style-none mb-0 border-lg-top pt-lg-3">
+                      <li class="edge-item-fix"><a href="https://github.com/case-studies" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Customer stories">Customer stories <span class="Bump-link-symbol float-right text-normal text-gray-light">→</span></a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/security" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Security">Security <span class="Bump-link-symbol float-right text-normal text-gray-light">→</span></a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+              <li class=" mr-3 mr-lg-3">
+                <a href="https://github.com/enterprise" class="HeaderMenu-link no-underline py-3 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, click, go to Enterprise">Enterprise</a>
+              </li>
+
+              <li class=" mr-3 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
+                <details class="HeaderMenu-details details-overlay details-reset width-full">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap  d-inline-block">
+                    Explore
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
+                      <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-0 mt-0  p-4 left-n4 position-absolute">
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/explore" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Features">Explore GitHub <span class="Bump-link-symbol float-right text-normal text-gray-light">→</span></a></li>
+                    </ul>
+
+                    <h4 class="text-gray-light text-normal text-mono f5 mb-2  border-top pt-3">Learn &amp; contribute</h4>
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/topics" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Topics">Topics</a></li>
+                        <li class="edge-item-fix"><a href="https://github.com/collections" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Collections">Collections</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/trending" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Trending">Trending</a></li>
+                      <li class="edge-item-fix"><a href="https://lab.github.com/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Learning lab">Learning Lab</a></li>
+                      <li class="edge-item-fix"><a href="https://opensource.guide/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Open source guides">Open source guides</a></li>
+                    </ul>
+
+                    <h4 class="text-gray-light text-normal text-mono f5 mb-2  border-top pt-3">Connect with others</h4>
+                    <ul class="list-style-none mb-0">
+                      <li class="edge-item-fix"><a href="https://github.com/events" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Events">Events</a></li>
+                      <li class="edge-item-fix"><a href="https://github.community/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Community forum">Community forum</a></li>
+                      <li class="edge-item-fix"><a href="https://education.github.com/" class="py-2 pb-0 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to GitHub Education">GitHub Education</a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+
+              <li class=" mr-3 mr-lg-3">
+                <a href="https://github.com/marketplace" class="HeaderMenu-link no-underline py-3 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, go to Marketplace">Marketplace</a>
+              </li>
+
+              <li class=" mr-3 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
+                <details class="HeaderMenu-details details-overlay details-reset width-full">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap  d-inline-block">
+                    Pricing
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
+                       <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-4 mt-0  p-4 left-n4 position-absolute">
+                    <a href="https://github.com/pricing" class="pb-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Pricing">Plans <span class="Bump-link-symbol float-right text-normal text-gray-light">→</span></a>
+
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/pricing#feature-comparison" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Compare features">Compare plans</a></li>
+                      <li class="edge-item-fix"><a href="https://enterprise.github.com/contact" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Compare features">Contact Sales</a></li>
+                    </ul>
+
+                    <ul class="list-style-none mb-0  border-top pt-3">
+                      <li class="edge-item-fix"><a href="https://github.com/nonprofit" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Nonprofits">Nonprofit <span class="Bump-link-symbol float-right text-normal text-gray-light">→</span></a></li>
+                      <li class="edge-item-fix"><a href="https://education.github.com/" class="py-2 pb-0 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Education">Education <span class="Bump-link-symbol float-right text-normal text-gray-light">→</span></a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+          </ul>
+        </nav>
+
+      <div class="d-flex flex-items-center px-0 text-center text-left">
+          <div class="d-lg-flex mr-3">
+            <div class="header-search scoped-search site-scoped-search js-site-search position-relative js-jump-to" role="combobox" aria-owns="jump-to-results" aria-label="Search or jump to" aria-haspopup="listbox" aria-expanded="false">
+  <div class="position-relative">
+    <!-- '"` --><!-- </textarea></xmp> --><form class="js-site-search-form" role="search" aria-label="Site" data-scope-type="Repository" data-scope-id="14440270" data-scoped-search-url="/getify/You-Dont-Know-JS/search" data-unscoped-search-url="/search" action="https://github.com/getify/You-Dont-Know-JS/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+      <label class="form-control header-search-wrapper header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
+        <input type="text" class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable" data-hotkey="s,/" name="q" value="" placeholder="Search" data-unscoped-placeholder="Search GitHub" data-scoped-placeholder="Search" autocapitalize="off" aria-autocomplete="list" aria-controls="jump-to-results" aria-label="Search" data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=BskmGcU174xsN0DTQcuyo7GcRfehnxSjfyiU7O+k8515VjqFfHf9vdVgQ4z5B//itvcHFQ8EJ2wkC0FUFypXlw==" spellcheck="false" autocomplete="off">
+          <input type="hidden" class="js-site-search-type-field" name="type">
+            <img src="./js_files/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
+
+            <div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
+              
+<ul class="d-none js-jump-to-suggestions-template-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-suggestion" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"></path></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"></path></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+</ul>
+
+<ul class="d-none js-jump-to-no-results-template-container">
+  <li class="d-flex flex-justify-center flex-items-center f5 d-none js-jump-to-suggestion p-2">
+    <span class="text-gray">No suggested jump to results</span>
+  </li>
+</ul>
+
+<ul id="jump-to-results" role="listbox" class="p-0 m-0 js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"></path></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"></path></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-global-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"></path></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"></path></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+
+</ul>
+
+            </div>
+      </label>
+</form>  </div>
+</div>
+
+          </div>
+
+        <a class="HeaderMenu-link no-underline mr-3" href="https://github.com/login?return_to=%2Fgetify%2FYou-Dont-Know-JS%2Fblob%2Fmaster%2Fup%2520%2526%2520going%2Fch1.md" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign&nbsp;in</a>
+          <a class="HeaderMenu-link d-inline-block no-underline border border-gray-dark rounded-1 px-2 py-1" href="https://github.com/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign&nbsp;up</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+
+</div>
+
+
+
+  <div class="application-main " data-commit-hovercards-enabled="">
+        <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <main id="js-repo-pjax-container" data-pjax-container="">
+      
+
+
+  
+
+
+
+
+
+
+  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav  ">
+    <div class="repohead-details-container clearfix container">
+
+      <ul class="pagehead-actions">
+
+
+
+  <li>
+      <a href="https://github.com/login?return_to=%2Fgetify%2FYou-Dont-Know-JS" class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+    Watch
+  </a>
+  <a class="social-count" href="https://github.com/getify/You-Dont-Know-JS/watchers" aria-label="5087 users are watching this repository">
+    5,087
+  </a>
+
+  </li>
+
+  <li>
+        <a href="https://github.com/login?return_to=%2Fgetify%2FYou-Dont-Know-JS" class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to star a repository" rel="nofollow">
+      <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+      Star
+    </a>
+
+    <a class="social-count js-social-count" href="https://github.com/getify/You-Dont-Know-JS/stargazers" aria-label="97859 users starred this repository">
+      97,859
+    </a>
+
+  </li>
+
+  <li>
+      <a href="https://github.com/login?return_to=%2Fgetify%2FYou-Dont-Know-JS" class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+        Fork
+      </a>
+
+    <a href="https://github.com/getify/You-Dont-Know-JS/network/members" class="social-count" aria-label="19127 users forked this repository">
+      19,127
+    </a>
+  </li>
+</ul>
+
+      <h1 class="public ">
+  <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+  <span class="author" itemprop="author"><a class="url fn" rel="author" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=150330" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/getify">getify</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="https://github.com/getify/You-Dont-Know-JS">You-Dont-Know-JS</a></strong>
+
+</h1>
+
+    </div>
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax container" itemscope="" itemtype="http://schema.org/BreadcrumbList" aria-label="Repository" data-pjax="#js-repo-pjax-container">
+
+  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a class="js-selected-navigation-item selected reponav-item" itemprop="url" data-hotkey="g c" aria-current="page" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /getify/You-Dont-Know-JS" href="https://github.com/getify/You-Dont-Know-JS">
+      <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"></path></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a itemprop="url" data-hotkey="g i" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /getify/You-Dont-Know-JS/issues" href="https://github.com/getify/You-Dont-Know-JS/issues">
+        <svg class="octicon octicon-issue-opened" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+        <span itemprop="name">Issues</span>
+        <span class="Counter">138</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a data-hotkey="g p" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /getify/You-Dont-Know-JS/pulls" href="https://github.com/getify/You-Dont-Know-JS/pulls">
+      <svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">96</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+
+    <a data-hotkey="g b" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /getify/You-Dont-Know-JS/projects" href="https://github.com/getify/You-Dont-Know-JS/projects">
+      <svg class="octicon octicon-project" viewBox="0 0 15 16" version="1.1" width="15" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"></path></svg>
+      Projects
+      <span class="Counter">1</span>
+</a>
+
+    <a class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /getify/You-Dont-Know-JS/wiki" href="https://github.com/getify/You-Dont-Know-JS/wiki">
+      <svg class="octicon octicon-book" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"></path></svg>
+      Wiki
+</a>
+    <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse alerts security people /getify/You-Dont-Know-JS/pulse" href="https://github.com/getify/You-Dont-Know-JS/pulse">
+      <svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"></path></svg>
+      Insights
+</a>
+
+</nav>
+
+
+  </div>
+<div class="container new-discussion-timeline experiment-repo-nav  ">
+  <div class="repository-content ">
+
+    
+    
+
+
+
+  
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="https://github.com/getify/You-Dont-Know-JS/blob/fe3ea179f1efd2c649789f713ead9ed765a4d80b/up%20%26%20going/ch1.md">Permalink</a>
+
+    <!-- blob contrib key: blob_contributors:v21:354517b8822ea6eadf14e8a8aee18347 -->
+
+        <div class="signup-prompt-bg rounded-1">
+      <div class="signup-prompt p-4 text-center mb-4 rounded-1">
+        <div class="position-relative">
+          <!-- '"` --><!-- </textarea></xmp> --><form action="https://github.com/site/dismiss_signup_prompt" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="JCow3hm3TGki6NEr3Z9SQzNVi5aQ6Ccml6uOjI7XacMKh3J8u+Umocnr4SM6bGCW1qr5URSbhvPx0Fs5DxT6NQ==">
+            <button type="submit" class="position-absolute top-0 right-0 btn-link link-gray" data-ga-click="(Logged out) Sign up prompt, clicked Dismiss, text:dismiss">
+              Dismiss
+            </button>
+</form>          <h3 class="pt-2">Join GitHub today</h3>
+          <p class="col-6 mx-auto">GitHub is home to over 31 million developers working together to host and review code, manage projects, and build software together.</p>
+          <a class="btn btn-primary" href="https://github.com/join?source=prompt-blob-show" data-ga-click="(Logged out) Sign up prompt, clicked Sign up, text:sign-up">Sign up</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="file-navigation">
+      
+<details class="details-reset details-overlay select-menu branch-select-menu float-left">
+  <summary class="btn btn-sm select-menu-button css-truncate" data-hotkey="w" title="Switch branches or tags" aria-haspopup="menu">
+    <i>Branch:</i>
+    <span class="css-truncate-target">master</span>
+  </summary>
+
+  <details-menu class="select-menu-modal position-absolute" style="z-index: 99;" src="/getify/You-Dont-Know-JS/ref-list/master/up%20&amp;%20going/ch1.md?source_action=show&amp;source_controller=blob" preload="" role="menu">
+    <include-fragment class="select-menu-loading-overlay anim-pulse">
+      <svg height="32" class="octicon octicon-octoface" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"></path></svg>
+    </include-fragment>
+  </details-menu>
+</details>
+
+      <div class="BtnGroup float-right">
+        <a href="https://github.com/getify/You-Dont-Know-JS/find/master" class="js-pjax-capture-input btn btn-sm BtnGroup-item" data-pjax="" data-hotkey="t">
+          Find file
+        </a>
+        <clipboard-copy for="blob-path" class="btn btn-sm BtnGroup-item" tabindex="0" role="button">
+          Copy path
+        </clipboard-copy>
+      </div>
+      <div id="blob-path" class="breadcrumb">
+        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="https://github.com/getify/You-Dont-Know-JS"><span>You-Dont-Know-JS</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="https://github.com/getify/You-Dont-Know-JS/tree/master/up%20%26%20going"><span>up &amp; going</span></a></span><span class="separator">/</span><strong class="final-path">ch1.md</strong>
+      </div>
+    </div>
+
+
+
+    
+  <div class="commit-tease d-flex flex-column flex-shrink-0">
+      <div class="d-flex flex-justify-between ">
+        <span class="pr-md-4">
+          <a rel="contributor" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=8841983" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/rflw"><img class="avatar" src="./js_files/8841983" width="20" height="20" alt="@rflw"></a>
+          <a class="user-mention" rel="contributor" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=8841983" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/rflw">rflw</a>
+            <a data-pjax="true" title="ch1.md unnecessary word (only)
+
+line 695 [...] but code -only- in `outer()` has access only to `a`" class="message" href="https://github.com/getify/You-Dont-Know-JS/commit/b57cbeb3b3c1c0d0e58754d2f862e64509029355">ch1.md unnecessary word (only)</a>
+        </span>
+        <span class="d-inline-block flex-shrink-0 v-align-bottom ">
+          <a class="commit-tease-sha pr-2" href="https://github.com/getify/You-Dont-Know-JS/commit/b57cbeb3b3c1c0d0e58754d2f862e64509029355" data-pjax="">
+            b57cbeb
+          </a>
+          <relative-time datetime="2016-03-17T20:28:01Z" title="Mar 17, 2016, 11:28 PM GMT+3">on Mar 17, 2016</relative-time>
+        </span>
+      </div>
+
+    <div class="commit-tease-contributors flex-auto">
+      
+<details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark float-left mr-2" id="blob_contributors_box">
+  <summary class="btn-link" aria-haspopup="dialog">
+    
+    <span><strong>6</strong> contributors</span>
+  </summary>
+  <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast " aria-label="Users who have contributed to this file" role="dialog">
+    <div class="Box-header">
+      <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog="">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+      </button>
+      <h3 class="Box-title">Users who have contributed to this file</h3>
+    </div>
+    
+        <ul class="list-style-none overflow-auto">
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="https://github.com/getify">
+                <img class="avatar mr-2" alt="" src="./js_files/150330" width="20" height="20">
+                getify
+</a>            </li>
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="https://github.com/OLawD">
+                <img class="avatar mr-2" alt="" src="./js_files/1689196" width="20" height="20">
+                OLawD
+</a>            </li>
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="https://github.com/rflw">
+                <img class="avatar mr-2" alt="" src="./js_files/8841983" width="20" height="20">
+                rflw
+</a>            </li>
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="https://github.com/pdawyndt">
+                <img class="avatar mr-2" alt="" src="./js_files/5736113" width="20" height="20">
+                pdawyndt
+</a>            </li>
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="https://github.com/elefontpress">
+                <img class="avatar mr-2" alt="" src="./js_files/2347060" width="20" height="20">
+                elefontpress
+</a>            </li>
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="https://github.com/imhaleyfyi">
+                <img class="avatar mr-2" alt="" src="./js_files/2374117" width="20" height="20">
+                imhaleyfyi
+</a>            </li>
+        </ul>
+
+  </details-dialog>
+</details>
+          <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=150330" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/getify/You-Dont-Know-JS/commits/master/up%20%26%20going/ch1.md?author=getify">
+      <img class="avatar" src="./js_files/150330" width="20" height="20" alt="@getify"> 
+</a>    <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=1689196" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/getify/You-Dont-Know-JS/commits/master/up%20%26%20going/ch1.md?author=OLawD">
+      <img class="avatar" src="./js_files/1689196" width="20" height="20" alt="@OLawD"> 
+</a>    <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=8841983" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/getify/You-Dont-Know-JS/commits/master/up%20%26%20going/ch1.md?author=rflw">
+      <img class="avatar" src="./js_files/8841983" width="20" height="20" alt="@rflw"> 
+</a>    <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=5736113" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/getify/You-Dont-Know-JS/commits/master/up%20%26%20going/ch1.md?author=pdawyndt">
+      <img class="avatar" src="./js_files/5736113" width="20" height="20" alt="@pdawyndt"> 
+</a>    <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=2347060" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/getify/You-Dont-Know-JS/commits/master/up%20%26%20going/ch1.md?author=elefontpress">
+      <img class="avatar" src="./js_files/2347060" width="20" height="20" alt="@elefontpress"> 
+</a>    <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=2374117" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/getify/You-Dont-Know-JS/commits/master/up%20%26%20going/ch1.md?author=imhaleyfyi">
+      <img class="avatar" src="./js_files/2374117" width="20" height="20" alt="@imhaleyfyi"> 
+</a>
+
+    </div>
+  </div>
+
+
+
+
+
+    <div class="file ">
+      
+<div class="file-header ">
+
+  <div class="file-info float-left ">
+      803 lines (499 sloc)
+      <span class="file-info-divider"></span>
+    41.8 KB
+  </div>
+
+  <div class="file-actions d-flex ">
+
+    <div class="BtnGroup">
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="https://github.com/getify/You-Dont-Know-JS/raw/master/up%20%26%20going/ch1.md">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="https://github.com/getify/You-Dont-Know-JS/blame/master/up%20%26%20going/ch1.md">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="https://github.com/getify/You-Dont-Know-JS/commits/master/up%20%26%20going/ch1.md">History</a>
+    </div>
+
+
+    <div>
+            <a class="btn-octicon tooltipped tooltipped-nw " href="https://desktop.github.com/" aria-label="Open this file in GitHub Desktop" data-ga-click="Repository, open with desktop, type:windows">
+                <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"></path></svg>
+            </a>
+
+          <button type="button" class="btn-octicon disabled tooltipped tooltipped-nw" aria-label="You must be signed in to make or propose changes">
+            <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
+          </button>
+          <button type="button" class="btn-octicon btn-octicon-danger disabled tooltipped tooltipped-nw" aria-label="You must be signed in to make or propose changes">
+            <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
+          </button>
+    </div>
+  </div>
+</div>
+
+      
+  <div id="readme" class="readme blob instapaper_body js-code-block-container">
+    <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-you-dont-know-js-up--going" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#you-dont-know-js-up--going"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>You Don't Know JS: Up &amp; Going</h1>
+<h1><a id="user-content-chapter-1-into-programming" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#chapter-1-into-programming"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chapter 1: Into Programming</h1>
+<p>Welcome to the <em>You Don't Know JS</em> (<em>YDKJS</em>) series.</p>
+<p><em>Up &amp; Going</em> is an introduction to several basic concepts of programming -- of course we lean toward JavaScript (often abbreviated JS) specifically -- and how to approach and understand the rest of the titles in this series. Especially if you're just getting into programming and/or JavaScript, this book will briefly explore what you need to get <em>up and going</em>.</p>
+<p>This book starts off explaining the basic principles of programming at a very high level. It's mostly intended if you are starting <em>YDKJS</em> with little to no prior programming experience, and are looking to these books to help get you started along a path to understanding programming through the lens of JavaScript.</p>
+<p>Chapter 1 should be approached as a quick overview of the things you'll want to learn more about and practice to get <em>into programming</em>. There are also many other fantastic programming introduction resources that can help you dig into these topics further, and I encourage you to learn from them in addition to this chapter.</p>
+<p>Once you feel comfortable with general programming basics, Chapter 2 will help guide you to a familiarity with JavaScript's flavor of programming. Chapter 2 introduces what JavaScript is about, but again, it's not a comprehensive guide -- that's what the rest of the <em>YDKJS</em> books are for!</p>
+<p>If you're already fairly comfortable with JavaScript, first check out Chapter 3 as a brief glimpse of what to expect from <em>YDKJS</em>, then jump right in!</p>
+<h2><a id="user-content-code" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#code"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code</h2>
+<p>Let's start from the beginning.</p>
+<p>A program, often referred to as <em>source code</em> or just <em>code</em>, is a set of special instructions to tell the computer what tasks to perform. Usually code is saved in a text file, although with JavaScript you can also type code directly into a developer console in a browser, which we'll cover shortly.</p>
+<p>The rules for valid format and combinations of instructions is called a <em>computer language</em>, sometimes referred to as its <em>syntax</em>, much the same as English tells you how to spell words and how to create valid sentences using words and punctuation.</p>
+<h3><a id="user-content-statements" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#statements"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Statements</h3>
+<p>In a computer language, a group of words, numbers, and operators that performs a specific task is a <em>statement</em>. In JavaScript, a statement might look as follows:</p>
+<div class="highlight highlight-source-js"><pre>a <span class="pl-k">=</span> b <span class="pl-k">*</span> <span class="pl-c1">2</span>;</pre></div>
+<p>The characters <code>a</code> and <code>b</code> are called <em>variables</em> (see "Variables"), which are like simple boxes you can store any of your stuff in. In programs, variables hold values (like the number <code>42</code>) to be used by the program. Think of them as symbolic placeholders for the values themselves.</p>
+<p>By contrast, the <code>2</code> is just a value itself, called a <em>literal value</em>, because it stands alone without being stored in a variable.</p>
+<p>The <code>=</code> and <code>*</code> characters are <em>operators</em> (see "Operators") -- they perform actions with the values and variables such as assignment and mathematic multiplication.</p>
+<p>Most statements in JavaScript conclude with a semicolon (<code>;</code>) at the end.</p>
+<p>The statement <code>a = b * 2;</code> tells the computer, roughly, to get the current value stored in the variable <code>b</code>, multiply that value by <code>2</code>, then store the result back into another variable we call <code>a</code>.</p>
+<p>Programs are just collections of many such statements, which together describe all the steps that it takes to perform your program's purpose.</p>
+<h3><a id="user-content-expressions" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#expressions"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expressions</h3>
+<p>Statements are made up of one or more <em>expressions</em>. An expression is any reference to a variable or value, or a set of variable(s) and value(s) combined with operators.</p>
+<p>For example:</p>
+<div class="highlight highlight-source-js"><pre>a <span class="pl-k">=</span> b <span class="pl-k">*</span> <span class="pl-c1">2</span>;</pre></div>
+<p>This statement has four expressions in it:</p>
+<ul>
+<li><code>2</code> is a <em>literal value expression</em></li>
+<li><code>b</code> is a <em>variable expression</em>, which means to retrieve its current value</li>
+<li><code>b * 2</code> is an <em>arithmetic expression</em>, which means to do the multiplication</li>
+<li><code>a = b * 2</code> is an <em>assignment expression</em>, which means to assign the result of the <code>b * 2</code> expression to the variable <code>a</code> (more on assignments later)</li>
+</ul>
+<p>A general expression that stands alone is also called an <em>expression statement</em>, such as the following:</p>
+<div class="highlight highlight-source-js"><pre>b <span class="pl-k">*</span> <span class="pl-c1">2</span>;</pre></div>
+<p>This flavor of expression statement is not very common or useful, as generally it wouldn't have any effect on the running of the program -- it would retrieve the value of <code>b</code> and multiply it by <code>2</code>, but then wouldn't do anything with that result.</p>
+<p>A more common expression statement is a <em>call expression</em> statement (see "Functions"), as the entire statement is the function call expression itself:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-en">alert</span>( a );</pre></div>
+<h3><a id="user-content-executing-a-program" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#executing-a-program"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Executing a Program</h3>
+<p>How do those collections of programming statements tell the computer what to do? The program needs to be <em>executed</em>, also referred to as <em>running the program</em>.</p>
+<p>Statements like <code>a = b * 2</code> are helpful for developers when reading and writing, but are not actually in a form the computer can directly understand. So a special utility on the computer (either an <em>interpreter</em> or a <em>compiler</em>) is used to translate the code you write into commands a computer can understand.</p>
+<p>For some computer languages, this translation of commands is typically done from top to bottom, line by line, every time the program is run, which is usually called <em>interpreting</em> the code.</p>
+<p>For other languages, the translation is done ahead of time, called <em>compiling</em> the code, so when the program <em>runs</em> later, what's running is actually the already compiled computer instructions ready to go.</p>
+<p>It's typically asserted that JavaScript is <em>interpreted</em>, because your JavaScript source code is processed each time it's run. But that's not entirely accurate. The JavaScript engine actually <em>compiles</em> the program on the fly and then immediately runs the compiled code.</p>
+<p><strong>Note:</strong> For more information on JavaScript compiling, see the first two chapters of the <em>Scope &amp; Closures</em> title of this series.</p>
+<h2><a id="user-content-try-it-yourself" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#try-it-yourself"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Try It Yourself</h2>
+<p>This chapter is going to introduce each programming concept with simple snippets of code, all written in JavaScript (obviously!).</p>
+<p>It cannot be emphasized enough: while you go through this chapter -- and you may need to spend the time to go over it several times -- you should practice each of these concepts by typing the code yourself. The easiest way to do that is to open up the developer tools console in your nearest browser (Firefox, Chrome, IE, etc.).</p>
+<p><strong>Tip:</strong> Typically, you can launch the developer console with a keyboard shortcut or from a menu item. For more detailed information about launching and using the console in your favorite browser, see "Mastering The Developer Tools Console" (<a href="http://blog.teamtreehouse.com/mastering-developer-tools-console" rel="nofollow">http://blog.teamtreehouse.com/mastering-developer-tools-console</a>). To type multiple lines into the console at once, use <code>&lt;shift&gt; + &lt;enter&gt;</code> to move to the next new line. Once you hit <code>&lt;enter&gt;</code> by itself, the console will run everything you've just typed.</p>
+<p>Let's get familiar with the process of running code in the console. First, I suggest opening up an empty tab in your browser. I prefer to do this by typing <code>about:blank</code> into the address bar. Then, make sure your developer console is open, as we just mentioned.</p>
+<p>Now, type this code and see how it runs:</p>
+<div class="highlight highlight-source-js"><pre>a <span class="pl-k">=</span> <span class="pl-c1">21</span>;
+
+b <span class="pl-k">=</span> a <span class="pl-k">*</span> <span class="pl-c1">2</span>;
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>( b );</pre></div>
+<p>Typing the preceding code into the console in Chrome should produce something like the following:</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/fig1.png"><img src="./js_files/fig1.png" width="500" style="max-width:100%;"></a></p>
+<p>Go on, try it. The best way to learn programming is to start coding!</p>
+<h3><a id="user-content-output" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#output"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Output</h3>
+<p>In the previous code snippet, we used <code>console.log(..)</code>. Briefly, let's look at what that line of code is all about.</p>
+<p>You may have guessed, but that's exactly how we print text (aka <em>output</em> to the user) in the developer console. There are two characteristics of that statement that we should explain.</p>
+<p>First, the <code>log( b )</code> part is referred to as a function call (see "Functions"). What's happening is we're handing the <code>b</code> variable to that function, which asks it to take the value of <code>b</code> and print it to the console.</p>
+<p>Second, the <code>console.</code> part is an object reference where the <code>log(..)</code> function is located. We cover objects and their properties in more detail in Chapter 2.</p>
+<p>Another way of creating output that you can see is to run an <code>alert(..)</code> statement. For example:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-en">alert</span>( b );</pre></div>
+<p>If you run that, you'll notice that instead of printing the output to the console, it shows a popup "OK" box with the contents of the <code>b</code> variable. However, using <code>console.log(..)</code> is generally going to make learning about coding and running your programs in the console easier than using <code>alert(..)</code>, because you can output many values at once without interrupting the browser interface.</p>
+<p>For this book, we'll use <code>console.log(..)</code> for output.</p>
+<h3><a id="user-content-input" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#input"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Input</h3>
+<p>While we're discussing output, you may also wonder about <em>input</em> (i.e., receiving information from the user).</p>
+<p>The most common way that happens is for the HTML page to show form elements (like text boxes) to a user that they can type into, and then using JS to read those values into your program's variables.</p>
+<p>But there's an easier way to get input for simple learning and demonstration purposes such as what you'll be doing throughout this book. Use the <code>prompt(..)</code> function:</p>
+<div class="highlight highlight-source-js"><pre>age <span class="pl-k">=</span> <span class="pl-en">prompt</span>( <span class="pl-s"><span class="pl-pds">"</span>Please tell me your age:<span class="pl-pds">"</span></span> );
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>( age );</pre></div>
+<p>As you may have guessed, the message you pass to <code>prompt(..)</code> -- in this case, <code>"Please tell me your age:"</code> -- is printed into the popup.</p>
+<p>This should look similar to the following:</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/fig2.png"><img src="./js_files/fig2.png" width="500" style="max-width:100%;"></a></p>
+<p>Once you submit the input text by clicking "OK," you'll observe that the value you typed is stored in the <code>age</code> variable, which we then <em>output</em> with <code>console.log(..)</code>:</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/fig3.png"><img src="./js_files/fig3.png" width="500" style="max-width:100%;"></a></p>
+<p>To keep things simple while we're learning basic programming concepts, the examples in this book will not require input. But now that you've seen how to use <code>prompt(..)</code>, if you want to challenge yourself you can try to use input in your explorations of the examples.</p>
+<h2><a id="user-content-operators" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#operators"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Operators</h2>
+<p>Operators are how we perform actions on variables and values. We've already seen two JavaScript operators, the <code>=</code> and the <code>*</code>.</p>
+<p>The <code>*</code> operator performs mathematic multiplication. Simple enough, right?</p>
+<p>The <code>=</code> equals operator is used for <em>assignment</em> -- we first calculate the value on the <em>right-hand side</em> (source value) of the <code>=</code> and then put it into the variable that we specify on the <em>left-hand side</em> (target variable).</p>
+<p><strong>Warning:</strong> This may seem like a strange reverse order to specify assignment. Instead of <code>a = 42</code>, some might prefer to flip the order so the source value is on the left and the target variable is on the right, like <code>42 -&gt; a</code> (this is not valid JavaScript!). Unfortunately, the <code>a = 42</code> ordered form, and similar variations, is quite prevalent in modern programming languages. If it feels unnatural, just spend some time rehearsing that ordering in your mind to get accustomed to it.</p>
+<p>Consider:</p>
+<div class="highlight highlight-source-js"><pre>a <span class="pl-k">=</span> <span class="pl-c1">2</span>;
+b <span class="pl-k">=</span> a <span class="pl-k">+</span> <span class="pl-c1">1</span>;</pre></div>
+<p>Here, we assign the <code>2</code> value to the <code>a</code> variable. Then, we get the value of the <code>a</code> variable (still <code>2</code>), add <code>1</code> to it resulting in the value <code>3</code>, then store that value in the <code>b</code> variable.</p>
+<p>While not technically an operator, you'll need the keyword <code>var</code> in every program, as it's the primary way you <em>declare</em> (aka <em>create</em>) <em>var</em>iables (see "Variables").</p>
+<p>You should always declare the variable by name before you use it. But you only need to declare a variable once for each <em>scope</em> (see "Scope"); it can be used as many times after that as needed. For example:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> a <span class="pl-k">=</span> <span class="pl-c1">20</span>;
+
+a <span class="pl-k">=</span> a <span class="pl-k">+</span> <span class="pl-c1">1</span>;
+a <span class="pl-k">=</span> a <span class="pl-k">*</span> <span class="pl-c1">2</span>;
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>( a );	<span class="pl-c"><span class="pl-c">//</span> 42</span></pre></div>
+<p>Here are some of the most common operators in JavaScript:</p>
+<ul>
+<li>
+<p>Assignment: <code>=</code> as in <code>a = 2</code>.</p>
+</li>
+<li>
+<p>Math: <code>+</code> (addition), <code>-</code> (subtraction), <code>*</code> (multiplication), and <code>/</code> (division), as in <code>a * 3</code>.</p>
+</li>
+<li>
+<p>Compound Assignment: <code>+=</code>, <code>-=</code>, <code>*=</code>, and <code>/=</code> are compound operators that combine a math operation with assignment, as in <code>a += 2</code> (same as <code>a = a + 2</code>).</p>
+</li>
+<li>
+<p>Increment/Decrement: <code>++</code> (increment), <code>--</code> (decrement), as in <code>a++</code> (similar to <code>a = a + 1</code>).</p>
+</li>
+<li>
+<p>Object Property Access: <code>.</code> as in <code>console.log()</code>.</p>
+<p>Objects are values that hold other values at specific named locations called properties. <code>obj.a</code> means an object value called <code>obj</code> with a property of the name <code>a</code>. Properties can alternatively be accessed as <code>obj["a"]</code>. See Chapter 2.</p>
+</li>
+<li>
+<p>Equality: <code>==</code> (loose-equals), <code>===</code> (strict-equals), <code>!=</code> (loose not-equals), <code>!==</code> (strict not-equals), as in <code>a == b</code>.</p>
+<p>See "Values &amp; Types" and Chapter 2.</p>
+</li>
+<li>
+<p>Comparison: <code>&lt;</code> (less than), <code>&gt;</code> (greater than), <code>&lt;=</code> (less than or loose-equals), <code>&gt;=</code> (greater than or loose-equals), as in <code>a &lt;= b</code>.</p>
+<p>See "Values &amp; Types" and Chapter 2.</p>
+</li>
+<li>
+<p>Logical: <code>&amp;&amp;</code> (and), <code>||</code> (or), as in <code>a || b</code> that selects either <code>a</code> <em>or</em> <code>b</code>.</p>
+<p>These operators are used to express compound conditionals (see "Conditionals"), like if either <code>a</code> <em>or</em> <code>b</code> is true.</p>
+</li>
+</ul>
+<p><strong>Note:</strong> For much more detail, and coverage of operators not mentioned here, see the Mozilla Developer Network (MDN)'s "Expressions and Operators" (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators" rel="nofollow">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators</a>).</p>
+<h2><a id="user-content-values--types" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#values--types"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Values &amp; Types</h2>
+<p>If you ask an employee at a phone store how much a certain phone costs, and they say "ninety-nine, ninety-nine" (i.e., $99.99), they're giving you an actual numeric dollar figure that represents what you'll need to pay (plus taxes) to buy it. If you want to buy two of those phones, you can easily do the mental math to double that value to get $199.98 for your base cost.</p>
+<p>If that same employee picks up another similar phone but says it's "free" (perhaps with air quotes), they're not giving you a number, but instead another kind of representation of your expected cost ($0.00) -- the word "free."</p>
+<p>When you later ask if the phone includes a charger, that answer could only have been either "yes" or "no."</p>
+<p>In very similar ways, when you express values in a program, you choose different representations for those values based on what you plan to do with them.</p>
+<p>These different representations for values are called <em>types</em> in programming terminology. JavaScript has built-in types for each of these so called <em>primitive</em> values:</p>
+<ul>
+<li>When you need to do math, you want a <code>number</code>.</li>
+<li>When you need to print a value on the screen, you need a <code>string</code> (one or more characters, words, sentences).</li>
+<li>When you need to make a decision in your program, you need a <code>boolean</code> (<code>true</code> or <code>false</code>).</li>
+</ul>
+<p>Values that are included directly in the source code are called <em>literals</em>. <code>string</code> literals are surrounded by double quotes <code>"..."</code> or single quotes (<code>'...'</code>) -- the only difference is stylistic preference. <code>number</code> and <code>boolean</code> literals are just presented as is (i.e., <code>42</code>, <code>true</code>, etc.).</p>
+<p>Consider:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-s"><span class="pl-pds">"</span>I am a string<span class="pl-pds">"</span></span>;
+<span class="pl-s"><span class="pl-pds">'</span>I am also a string<span class="pl-pds">'</span></span>;
+
+<span class="pl-c1">42</span>;
+
+<span class="pl-c1">true</span>;
+<span class="pl-c1">false</span>;</pre></div>
+<p>Beyond <code>string</code>/<code>number</code>/<code>boolean</code> value types, it's common for programming languages to provide <em>arrays</em>, <em>objects</em>, <em>functions</em>, and more. We'll cover much more about values and types throughout this chapter and the next.</p>
+<h3><a id="user-content-converting-between-types" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#converting-between-types"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Converting Between Types</h3>
+<p>If you have a <code>number</code> but need to print it on the screen, you need to convert the value to a <code>string</code>, and in JavaScript this conversion is called "coercion." Similarly, if someone enters a series of numeric characters into a form on an ecommerce page, that's a <code>string</code>, but if you need to then use that value to do math operations, you need to <em>coerce</em> it to a <code>number</code>.</p>
+<p>JavaScript provides several different facilities for forcibly coercing between <em>types</em>. For example:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> a <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>42<span class="pl-pds">"</span></span>;
+<span class="pl-k">var</span> b <span class="pl-k">=</span> <span class="pl-c1">Number</span>( a );
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>( a );	<span class="pl-c"><span class="pl-c">//</span> "42"</span>
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>( b );	<span class="pl-c"><span class="pl-c">//</span> 42</span></pre></div>
+<p>Using <code>Number(..)</code> (a built-in function) as shown is an <em>explicit</em> coercion from any other type to the <code>number</code> type. That should be pretty straightforward.</p>
+<p>But a controversial topic is what happens when you try to compare two values that are not already of the same type, which would require <em>implicit</em> coercion.</p>
+<p>When comparing the string <code>"99.99"</code> to the number <code>99.99</code>, most people would agree they are equivalent. But they're not exactly the same, are they? It's the same value in two different representations, two different <em>types</em>. You could say they're "loosely equal," couldn't you?</p>
+<p>To help you out in these common situations, JavaScript will sometimes kick in and <em>implicitly</em> coerce values to the matching types.</p>
+<p>So if you use the <code>==</code> loose equals operator to make the comparison <code>"99.99" == 99.99</code>, JavaScript will convert the left-hand side <code>"99.99"</code> to its <code>number</code> equivalent <code>99.99</code>. The comparison then becomes <code>99.99 == 99.99</code>, which is of course <code>true</code>.</p>
+<p>While designed to help you, implicit coercion can create confusion if you haven't taken the time to learn the rules that govern its behavior. Most JS developers never have, so the common feeling is that implicit coercion is confusing and harms programs with unexpected bugs, and should thus be avoided. It's even sometimes called a flaw in the design of the language.</p>
+<p>However, implicit coercion is a mechanism that <em>can be learned</em>, and moreover <em>should be learned</em> by anyone wishing to take JavaScript programming seriously. Not only is it not confusing once you learn the rules, it can actually make your programs better! The effort is well worth it.</p>
+<p><strong>Note:</strong> For more information on coercion, see Chapter 2 of this title and Chapter 4 of the <em>Types &amp; Grammar</em> title of this series.</p>
+<h2><a id="user-content-code-comments" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#code-comments"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code Comments</h2>
+<p>The phone store employee might jot down some notes on the features of a newly released phone or on the new plans her company offers. These notes are only for the employee -- they're not for customers to read. Nevertheless, these notes help the employee do her job better by documenting the hows and whys of what she should tell customers.</p>
+<p>One of the most important lessons you can learn about writing code is that it's not just for the computer. Code is every bit as much, if not more, for the developer as it is for the compiler.</p>
+<p>Your computer only cares about machine code, a series of binary 0s and 1s, that comes from <em>compilation</em>. There's a nearly infinite number of programs you could write that yield the same series of 0s and 1s. The choices you make about how to write your program matter -- not only to you, but to your other team members and even to your future self.</p>
+<p>You should strive not just to write programs that work correctly, but programs that make sense when examined. You can go a long way in that effort by choosing good names for your variables (see "Variables") and functions (see "Functions").</p>
+<p>But another important part is code comments. These are bits of text in your program that are inserted purely to explain things to a human. The interpreter/compiler will always ignore these comments.</p>
+<p>There are lots of opinions on what makes well-commented code; we can't really define absolute universal rules. But some observations and guidelines are quite useful:</p>
+<ul>
+<li>Code without comments is suboptimal.</li>
+<li>Too many comments (one per line, for example) is probably a sign of poorly written code.</li>
+<li>Comments should explain <em>why</em>, not <em>what</em>. They can optionally explain <em>how</em> if that's particularly confusing.</li>
+</ul>
+<p>In JavaScript, there are two types of comments possible: a single-line comment and a multiline comment.</p>
+<p>Consider:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-c"><span class="pl-c">//</span> This is a single-line comment</span>
+
+<span class="pl-c"><span class="pl-c">/*</span> But this is</span>
+<span class="pl-c">       a multiline</span>
+<span class="pl-c">             comment.</span>
+<span class="pl-c">                      <span class="pl-c">*/</span></span></pre></div>
+<p>The <code>//</code> single-line comment is appropriate if you're going to put a comment right above a single statement, or even at the end of a line. Everything on the line after the <code>//</code> is treated as the comment (and thus ignored by the compiler), all the way to the end of the line. There's no restriction to what can appear inside a single-line comment.</p>
+<p>Consider:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> a <span class="pl-k">=</span> <span class="pl-c1">42</span>;		<span class="pl-c"><span class="pl-c">//</span> 42 is the meaning of life</span></pre></div>
+<p>The <code>/* .. */</code> multiline comment is appropriate if you have several lines worth of explanation to make in your comment.</p>
+<p>Here's a common usage of multiline comments:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-c"><span class="pl-c">/*</span> The following value is used because</span>
+<span class="pl-c">   it has been shown that it answers</span>
+<span class="pl-c">   every question in the universe. <span class="pl-c">*/</span></span>
+<span class="pl-k">var</span> a <span class="pl-k">=</span> <span class="pl-c1">42</span>;</pre></div>
+<p>It can also appear anywhere on a line, even in the middle of a line, because the <code>*/</code> ends it. For example:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> a <span class="pl-k">=</span> <span class="pl-c"><span class="pl-c">/*</span> arbitrary value <span class="pl-c">*/</span></span> <span class="pl-c1">42</span>;
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>( a );	<span class="pl-c"><span class="pl-c">//</span> 42</span></pre></div>
+<p>The only thing that cannot appear inside a multiline comment is a <code>*/</code>, because that would be interpreted to end the comment.</p>
+<p>You will definitely want to begin your learning of programming by starting off with the habit of commenting code. Throughout the rest of this chapter, you'll see I use comments to explain things, so do the same in your own practice. Trust me, everyone who reads your code will thank you!</p>
+<h2><a id="user-content-variables" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#variables"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variables</h2>
+<p>Most useful programs need to track a value as it changes over the course of the program, undergoing different operations as called for by your program's intended tasks.</p>
+<p>The easiest way to go about that in your program is to assign a value to a symbolic container, called a <em>variable</em> -- so called because the value in this container can <em>vary</em> over time as needed.</p>
+<p>In some programming languages, you declare a variable (container) to hold a specific type of value, such as <code>number</code> or <code>string</code>. <em>Static typing</em>, otherwise known as <em>type enforcement</em>, is typically cited as a benefit for program correctness by preventing unintended value conversions.</p>
+<p>Other languages emphasize types for values instead of variables. <em>Weak typing</em>, otherwise known as <em>dynamic typing</em>, allows a variable to hold any type of value at any time. It's typically cited as a benefit for program flexibility by allowing a single variable to represent a value no matter what type form that value may take at any given moment in the program's logic flow.</p>
+<p>JavaScript uses the latter approach, <em>dynamic typing</em>, meaning variables can hold values of any <em>type</em> without any <em>type</em> enforcement.</p>
+<p>As mentioned earlier, we declare a variable using the <code>var</code> statement -- notice there's no other <em>type</em> information in the declaration. Consider this simple program:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> amount <span class="pl-k">=</span> <span class="pl-c1">99.99</span>;
+
+amount <span class="pl-k">=</span> amount <span class="pl-k">*</span> <span class="pl-c1">2</span>;
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>( amount );		<span class="pl-c"><span class="pl-c">//</span> 199.98</span>
+
+<span class="pl-c"><span class="pl-c">//</span> convert `amount` to a string, and</span>
+<span class="pl-c"><span class="pl-c">//</span> add "$" on the beginning</span>
+amount <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>$<span class="pl-pds">"</span></span> <span class="pl-k">+</span> <span class="pl-c1">String</span>( amount );
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>( amount );		<span class="pl-c"><span class="pl-c">//</span> "$199.98"</span></pre></div>
+<p>The <code>amount</code> variable starts out holding the number <code>99.99</code>, and then holds the <code>number</code> result of <code>amount * 2</code>, which is <code>199.98</code>.</p>
+<p>The first <code>console.log(..)</code> command has to <em>implicitly</em> coerce that <code>number</code> value to a <code>string</code> to print it out.</p>
+<p>Then the statement <code>amount = "$" + String(amount)</code> <em>explicitly</em> coerces the <code>199.98</code> value to a <code>string</code> and adds a <code>"$"</code> character to the beginning. At this point, <code>amount</code> now holds the <code>string</code> value <code>"$199.98"</code>, so the second <code>console.log(..)</code> statement doesn't need to do any coercion to print it out.</p>
+<p>JavaScript developers will note the flexibility of using the <code>amount</code> variable for each of the <code>99.99</code>, <code>199.98</code>, and the <code>"$199.98"</code> values. Static-typing enthusiasts would prefer a separate variable like <code>amountStr</code> to hold the final <code>"$199.98"</code> representation of the value, because it's a different type.</p>
+<p>Either way, you'll note that <code>amount</code> holds a running value that changes over the course of the program, illustrating the primary purpose of variables: managing program <em>state</em>.</p>
+<p>In other words, <em>state</em> is tracking the changes to values as your program runs.</p>
+<p>Another common usage of variables is for centralizing value setting. This is more typically called <em>constants</em>, when you declare a variable with a value and intend for that value to <em>not change</em> throughout the program.</p>
+<p>You declare these <em>constants</em>, often at the top of a program, so that it's convenient for you to have one place to go to alter a value if you need to. By convention, JavaScript variables as constants are usually capitalized, with underscores <code>_</code> between multiple words.</p>
+<p>Here's a silly example:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> <span class="pl-c1">TAX_RATE</span> <span class="pl-k">=</span> <span class="pl-c1">0.08</span>;	<span class="pl-c"><span class="pl-c">//</span> 8% sales tax</span>
+
+<span class="pl-k">var</span> amount <span class="pl-k">=</span> <span class="pl-c1">99.99</span>;
+
+amount <span class="pl-k">=</span> amount <span class="pl-k">*</span> <span class="pl-c1">2</span>;
+
+amount <span class="pl-k">=</span> amount <span class="pl-k">+</span> (amount <span class="pl-k">*</span> <span class="pl-c1">TAX_RATE</span>);
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>( amount );				<span class="pl-c"><span class="pl-c">//</span> 215.9784</span>
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>( <span class="pl-smi">amount</span>.<span class="pl-en">toFixed</span>( <span class="pl-c1">2</span> ) );	<span class="pl-c"><span class="pl-c">//</span> "215.98"</span></pre></div>
+<p><strong>Note:</strong> Similar to how <code>console.log(..)</code> is a function <code>log(..)</code> accessed as an object property on the <code>console</code> value, <code>toFixed(..)</code> here is a function that can be accessed on <code>number</code> values. JavaScript <code>number</code>s aren't automatically formatted for dollars -- the engine doesn't know what your intent is and there's no type for currency. <code>toFixed(..)</code> lets us specify how many decimal places we'd like the <code>number</code> rounded to, and it produces the <code>string</code> as necessary.</p>
+<p>The <code>TAX_RATE</code> variable is only <em>constant</em> by convention -- there's nothing special in this program that prevents it from being changed. But if the city raises the sales tax rate to 9%, we can still easily update our program by setting the <code>TAX_RATE</code> assigned value to <code>0.09</code> in one place, instead of finding many occurrences of the value <code>0.08</code> strewn throughout the program and updating all of them.</p>
+<p>The newest version of JavaScript at the time of this writing (commonly called "ES6") includes a new way to declare <em>constants</em>, by using <code>const</code> instead of <code>var</code>:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-c"><span class="pl-c">//</span> as of ES6:</span>
+<span class="pl-k">const</span> <span class="pl-c1">TAX_RATE</span> <span class="pl-k">=</span> <span class="pl-c1">0.08</span>;
+
+<span class="pl-k">var</span> amount <span class="pl-k">=</span> <span class="pl-c1">99.99</span>;
+
+<span class="pl-c"><span class="pl-c">//</span> ..</span></pre></div>
+<p>Constants are useful just like variables with unchanged values, except that constants also prevent accidentally changing value somewhere else after the initial setting. If you tried to assign any different value to <code>TAX_RATE</code> after that first declaration, your program would reject the change (and in strict mode, fail with an error -- see "Strict Mode" in Chapter 2).</p>
+<p>By the way, that kind of "protection" against mistakes is similar to the static-typing type enforcement, so you can see why static types in other languages can be attractive!</p>
+<p><strong>Note:</strong> For more information about how different values in variables can be used in your programs, see the <em>Types &amp; Grammar</em> title of this series.</p>
+<h2><a id="user-content-blocks" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#blocks"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Blocks</h2>
+<p>The phone store employee must go through a series of steps to complete the checkout as you buy your new phone.</p>
+<p>Similarly, in code we often need to group a series of statements together, which we often call a <em>block</em>. In JavaScript, a block is defined by wrapping one or more statements inside a curly-brace pair <code>{ .. }</code>. Consider:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> amount <span class="pl-k">=</span> <span class="pl-c1">99.99</span>;
+
+<span class="pl-c"><span class="pl-c">//</span> a general block</span>
+{
+	amount <span class="pl-k">=</span> amount <span class="pl-k">*</span> <span class="pl-c1">2</span>;
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>( amount );	<span class="pl-c"><span class="pl-c">//</span> 199.98</span>
+}</pre></div>
+<p>This kind of standalone <code>{ .. }</code> general block is valid, but isn't as commonly seen in JS programs. Typically, blocks are attached to some other control statement, such as an <code>if</code> statement (see "Conditionals") or a loop (see "Loops"). For example:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> amount <span class="pl-k">=</span> <span class="pl-c1">99.99</span>;
+
+<span class="pl-c"><span class="pl-c">//</span> is amount big enough?</span>
+<span class="pl-k">if</span> (amount <span class="pl-k">&gt;</span> <span class="pl-c1">10</span>) {			<span class="pl-c"><span class="pl-c">//</span> &lt;-- block attached to `if`</span>
+	amount <span class="pl-k">=</span> amount <span class="pl-k">*</span> <span class="pl-c1">2</span>;
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>( amount );	<span class="pl-c"><span class="pl-c">//</span> 199.98</span>
+}</pre></div>
+<p>We'll explain <code>if</code> statements in the next section, but as you can see, the <code>{ .. }</code> block with its two statements is attached to <code>if (amount &gt; 10)</code>; the statements inside the block will only be processed if the conditional passes.</p>
+<p><strong>Note:</strong> Unlike most other statements like <code>console.log(amount);</code>, a block statement does not need a semicolon (<code>;</code>) to conclude it.</p>
+<h2><a id="user-content-conditionals" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#conditionals"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conditionals</h2>
+<p>"Do you want to add on the extra screen protectors to your purchase, for $9.99?" The helpful phone store employee has asked you to make a decision. And you may need to first consult the current <em>state</em> of your wallet or bank account to answer that question. But obviously, this is just a simple "yes or no" question.</p>
+<p>There are quite a few ways we can express <em>conditionals</em> (aka decisions) in our programs.</p>
+<p>The most common one is the <code>if</code> statement. Essentially, you're saying, "<em>If</em> this condition is true, do the following...". For example:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> bank_balance <span class="pl-k">=</span> <span class="pl-c1">302.13</span>;
+<span class="pl-k">var</span> amount <span class="pl-k">=</span> <span class="pl-c1">99.99</span>;
+
+<span class="pl-k">if</span> (amount <span class="pl-k">&lt;</span> bank_balance) {
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>( <span class="pl-s"><span class="pl-pds">"</span>I want to buy this phone!<span class="pl-pds">"</span></span> );
+}</pre></div>
+<p>The <code>if</code> statement requires an expression in between the parentheses <code>( )</code> that can be treated as either <code>true</code> or <code>false</code>. In this program, we provided the expression <code>amount &lt; bank_balance</code>, which indeed will either evaluate to <code>true</code> or <code>false</code> depending on the amount in the <code>bank_balance</code> variable.</p>
+<p>You can even provide an alternative if the condition isn't true, called an <code>else</code> clause. Consider:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">ACCESSORY_PRICE</span> <span class="pl-k">=</span> <span class="pl-c1">9.99</span>;
+
+<span class="pl-k">var</span> bank_balance <span class="pl-k">=</span> <span class="pl-c1">302.13</span>;
+<span class="pl-k">var</span> amount <span class="pl-k">=</span> <span class="pl-c1">99.99</span>;
+
+amount <span class="pl-k">=</span> amount <span class="pl-k">*</span> <span class="pl-c1">2</span>;
+
+<span class="pl-c"><span class="pl-c">//</span> can we afford the extra purchase?</span>
+<span class="pl-k">if</span> ( amount <span class="pl-k">&lt;</span> bank_balance ) {
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>( <span class="pl-s"><span class="pl-pds">"</span>I'll take the accessory!<span class="pl-pds">"</span></span> );
+	amount <span class="pl-k">=</span> amount <span class="pl-k">+</span> <span class="pl-c1">ACCESSORY_PRICE</span>;
+}
+<span class="pl-c"><span class="pl-c">//</span> otherwise:</span>
+<span class="pl-k">else</span> {
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>( <span class="pl-s"><span class="pl-pds">"</span>No, thanks.<span class="pl-pds">"</span></span> );
+}</pre></div>
+<p>Here, if <code>amount &lt; bank_balance</code> is <code>true</code>, we'll print out <code>"I'll take the accessory!"</code> and add the <code>9.99</code> to our <code>amount</code> variable. Otherwise, the <code>else</code> clause says we'll just politely respond with <code>"No, thanks."</code> and leave <code>amount</code> unchanged.</p>
+<p>As we discussed in "Values &amp; Types" earlier, values that aren't already of an expected type are often coerced to that type. The <code>if</code> statement expects a <code>boolean</code>, but if you pass it something that's not already <code>boolean</code>, coercion will occur.</p>
+<p>JavaScript defines a list of specific values that are considered "falsy" because when coerced to a <code>boolean</code>, they become <code>false</code> -- these include values like <code>0</code> and <code>""</code>. Any other value not on the "falsy" list is automatically "truthy" -- when coerced to a <code>boolean</code> they become <code>true</code>. Truthy values include things like <code>99.99</code> and <code>"free"</code>. See "Truthy &amp; Falsy" in Chapter 2 for more information.</p>
+<p><em>Conditionals</em> exist in other forms besides the <code>if</code>. For example, the <code>switch</code> statement can be used as a shorthand for a series of <code>if..else</code> statements (see Chapter 2). Loops (see "Loops") use a <em>conditional</em> to determine if the loop should keep going or stop.</p>
+<p><strong>Note:</strong> For deeper information about the coercions that can occur implicitly in the test expressions of <em>conditionals</em>, see Chapter 4 of the <em>Types &amp; Grammar</em> title of this series.</p>
+<h2><a id="user-content-loops" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#loops"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loops</h2>
+<p>During busy times, there's a waiting list for customers who need to speak to the phone store employee. While there's still people on that list, she just needs to keep serving the next customer.</p>
+<p>Repeating a set of actions until a certain condition fails -- in other words, repeating only while the condition holds -- is the job of programming loops; loops can take different forms, but they all satisfy this basic behavior.</p>
+<p>A loop includes the test condition as well as a block (typically as <code>{ .. }</code>). Each time the loop block executes, that's called an <em>iteration</em>.</p>
+<p>For example, the <code>while</code> loop and the <code>do..while</code> loop forms illustrate the concept of repeating a block of statements until a condition no longer evaluates to <code>true</code>:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">while</span> (numOfCustomers <span class="pl-k">&gt;</span> <span class="pl-c1">0</span>) {
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>( <span class="pl-s"><span class="pl-pds">"</span>How may I help you?<span class="pl-pds">"</span></span> );
+
+	<span class="pl-c"><span class="pl-c">//</span> help the customer...</span>
+
+	numOfCustomers <span class="pl-k">=</span> numOfCustomers <span class="pl-k">-</span> <span class="pl-c1">1</span>;
+}
+
+<span class="pl-c"><span class="pl-c">//</span> versus:</span>
+
+<span class="pl-k">do</span> {
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>( <span class="pl-s"><span class="pl-pds">"</span>How may I help you?<span class="pl-pds">"</span></span> );
+
+	<span class="pl-c"><span class="pl-c">//</span> help the customer...</span>
+
+	numOfCustomers <span class="pl-k">=</span> numOfCustomers <span class="pl-k">-</span> <span class="pl-c1">1</span>;
+} <span class="pl-k">while</span> (numOfCustomers <span class="pl-k">&gt;</span> <span class="pl-c1">0</span>);</pre></div>
+<p>The only practical difference between these loops is whether the conditional is tested before the first iteration (<code>while</code>) or after the first iteration (<code>do..while</code>).</p>
+<p>In either form, if the conditional tests as <code>false</code>, the next iteration will not run. That means if the condition is initially <code>false</code>, a <code>while</code> loop will never run, but a <code>do..while</code> loop will run just the first time.</p>
+<p>Sometimes you are looping for the intended purpose of counting a certain set of numbers, like from <code>0</code> to <code>9</code> (ten numbers). You can do that by setting a loop iteration variable like <code>i</code> at value <code>0</code> and incrementing it by <code>1</code> each iteration.</p>
+<p><strong>Warning:</strong> For a variety of historical reasons, programming languages almost always count things in a zero-based fashion, meaning starting with <code>0</code> instead of <code>1</code>. If you're not familiar with that mode of thinking, it can be quite confusing at first. Take some time to practice counting starting with <code>0</code> to become more comfortable with it!</p>
+<p>The conditional is tested on each iteration, much as if there is an implied <code>if</code> statement inside the loop.</p>
+<p>We can use JavaScript's <code>break</code> statement to stop a loop. Also, we can observe that it's awfully easy to create a loop that would otherwise run forever without a <code>break</code>ing mechanism.</p>
+<p>Let's illustrate:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>;
+
+<span class="pl-c"><span class="pl-c">//</span> a `while..true` loop would run forever, right?</span>
+<span class="pl-k">while</span> (<span class="pl-c1">true</span>) {
+	<span class="pl-c"><span class="pl-c">//</span> stop the loop?</span>
+	<span class="pl-k">if</span> ((i <span class="pl-k">&lt;=</span> <span class="pl-c1">9</span>) <span class="pl-k">===</span> <span class="pl-c1">false</span>) {
+		<span class="pl-k">break</span>;
+	}
+
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>( i );
+	i <span class="pl-k">=</span> i <span class="pl-k">+</span> <span class="pl-c1">1</span>;
+}
+<span class="pl-c"><span class="pl-c">//</span> 0 1 2 3 4 5 6 7 8 9</span></pre></div>
+<p><strong>Warning:</strong> This is not necessarily a practical form you'd want to use for your loops. It's presented here for illustration purposes only.</p>
+<p>While a <code>while</code> (or <code>do..while</code>) can accomplish the task manually, there's another syntactic form called a <code>for</code> loop for just that purpose:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">for</span> (<span class="pl-k">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;=</span> <span class="pl-c1">9</span>; i <span class="pl-k">=</span> i <span class="pl-k">+</span> <span class="pl-c1">1</span>) {
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>( i );
+}
+<span class="pl-c"><span class="pl-c">//</span> 0 1 2 3 4 5 6 7 8 9</span></pre></div>
+<p>As you can see, in both cases the conditional <code>i &lt;= 9</code> is <code>true</code> for the first 10 iterations (<code>i</code> of values <code>0</code> through <code>9</code>) of either loop form, but becomes <code>false</code> once <code>i</code> is value <code>10</code>.</p>
+<p>The <code>for</code> loop has three clauses: the initialization clause (<code>var i=0</code>), the conditional test clause (<code>i &lt;= 9</code>), and the update clause (<code>i = i + 1</code>). So if you're going to do counting with your loop iterations, <code>for</code> is a more compact and often easier form to understand and write.</p>
+<p>There are other specialized loop forms that are intended to iterate over specific values, such as the properties of an object (see Chapter 2) where the implied conditional test is just whether all the properties have been processed. The "loop until a condition fails" concept holds no matter what the form of the loop.</p>
+<h2><a id="user-content-functions" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#functions"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Functions</h2>
+<p>The phone store employee probably doesn't carry around a calculator to figure out the taxes and final purchase amount. That's a task she needs to define once and reuse over and over again. Odds are, the company has a checkout register (computer, tablet, etc.) with those "functions" built in.</p>
+<p>Similarly, your program will almost certainly want to break up the code's tasks into reusable pieces, instead of repeatedly repeating yourself repetitiously (pun intended!). The way to do this is to define a <code>function</code>.</p>
+<p>A function is generally a named section of code that can be "called" by name, and the code inside it will be run each time. Consider:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">printAmount</span>() {
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>( <span class="pl-smi">amount</span>.<span class="pl-en">toFixed</span>( <span class="pl-c1">2</span> ) );
+}
+
+<span class="pl-k">var</span> amount <span class="pl-k">=</span> <span class="pl-c1">99.99</span>;
+
+<span class="pl-en">printAmount</span>(); <span class="pl-c"><span class="pl-c">//</span> "99.99"</span>
+
+amount <span class="pl-k">=</span> amount <span class="pl-k">*</span> <span class="pl-c1">2</span>;
+
+<span class="pl-en">printAmount</span>(); <span class="pl-c"><span class="pl-c">//</span> "199.98"</span></pre></div>
+<p>Functions can optionally take arguments (aka parameters) -- values you pass in. And they can also optionally return a value back.</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">printAmount</span>(<span class="pl-smi">amt</span>) {
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>( <span class="pl-smi">amt</span>.<span class="pl-en">toFixed</span>( <span class="pl-c1">2</span> ) );
+}
+
+<span class="pl-k">function</span> <span class="pl-en">formatAmount</span>() {
+	<span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">"</span>$<span class="pl-pds">"</span></span> <span class="pl-k">+</span> <span class="pl-smi">amount</span>.<span class="pl-en">toFixed</span>( <span class="pl-c1">2</span> );
+}
+
+<span class="pl-k">var</span> amount <span class="pl-k">=</span> <span class="pl-c1">99.99</span>;
+
+<span class="pl-en">printAmount</span>( amount <span class="pl-k">*</span> <span class="pl-c1">2</span> );		<span class="pl-c"><span class="pl-c">//</span> "199.98"</span>
+
+amount <span class="pl-k">=</span> <span class="pl-en">formatAmount</span>();
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>( amount );			<span class="pl-c"><span class="pl-c">//</span> "$99.99"</span></pre></div>
+<p>The function <code>printAmount(..)</code> takes a parameter that we call <code>amt</code>. The function <code>formatAmount()</code> returns a value. Of course, you can also combine those two techniques in the same function.</p>
+<p>Functions are often used for code that you plan to call multiple times, but they can also be useful just to organize related bits of code into named collections, even if you only plan to call them once.</p>
+<p>Consider:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">TAX_RATE</span> <span class="pl-k">=</span> <span class="pl-c1">0.08</span>;
+
+<span class="pl-k">function</span> <span class="pl-en">calculateFinalPurchaseAmount</span>(<span class="pl-smi">amt</span>) {
+	<span class="pl-c"><span class="pl-c">//</span> calculate the new amount with the tax</span>
+	amt <span class="pl-k">=</span> amt <span class="pl-k">+</span> (amt <span class="pl-k">*</span> <span class="pl-c1">TAX_RATE</span>);
+
+	<span class="pl-c"><span class="pl-c">//</span> return the new amount</span>
+	<span class="pl-k">return</span> amt;
+}
+
+<span class="pl-k">var</span> amount <span class="pl-k">=</span> <span class="pl-c1">99.99</span>;
+
+amount <span class="pl-k">=</span> <span class="pl-en">calculateFinalPurchaseAmount</span>( amount );
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>( <span class="pl-smi">amount</span>.<span class="pl-en">toFixed</span>( <span class="pl-c1">2</span> ) );		<span class="pl-c"><span class="pl-c">//</span> "107.99"</span></pre></div>
+<p>Although <code>calculateFinalPurchaseAmount(..)</code> is only called once, organizing its behavior into a separate named function makes the code that uses its logic (the <code>amount = calculateFinal...</code> statement) cleaner. If the function had more statements in it, the benefits would be even more pronounced.</p>
+<h3><a id="user-content-scope" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#scope"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scope</h3>
+<p>If you ask the phone store employee for a phone model that her store doesn't carry, she will not be able to sell you the phone you want. She only has access to the phones in her store's inventory. You'll have to try another store to see if you can find the phone you're looking for.</p>
+<p>Programming has a term for this concept: <em>scope</em> (technically called <em>lexical scope</em>). In JavaScript, each function gets its own scope. Scope is basically a collection of variables as well as the rules for how those variables are accessed by name. Only code inside that function can access that function's <em>scoped</em> variables.</p>
+<p>A variable name has to be unique within the same scope -- there can't be two different <code>a</code> variables sitting right next to each other. But the same variable name <code>a</code> could appear in different scopes.</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">one</span>() {
+	<span class="pl-c"><span class="pl-c">//</span> this `a` only belongs to the `one()` function</span>
+	<span class="pl-k">var</span> a <span class="pl-k">=</span> <span class="pl-c1">1</span>;
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>( a );
+}
+
+<span class="pl-k">function</span> <span class="pl-en">two</span>() {
+	<span class="pl-c"><span class="pl-c">//</span> this `a` only belongs to the `two()` function</span>
+	<span class="pl-k">var</span> a <span class="pl-k">=</span> <span class="pl-c1">2</span>;
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>( a );
+}
+
+<span class="pl-en">one</span>();		<span class="pl-c"><span class="pl-c">//</span> 1</span>
+<span class="pl-en">two</span>();		<span class="pl-c"><span class="pl-c">//</span> 2</span></pre></div>
+<p>Also, a scope can be nested inside another scope, just like if a clown at a birthday party blows up one balloon inside another balloon. If one scope is nested inside another, code inside the innermost scope can access variables from either scope.</p>
+<p>Consider:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">outer</span>() {
+	<span class="pl-k">var</span> a <span class="pl-k">=</span> <span class="pl-c1">1</span>;
+
+	<span class="pl-k">function</span> <span class="pl-en">inner</span>() {
+		<span class="pl-k">var</span> b <span class="pl-k">=</span> <span class="pl-c1">2</span>;
+
+		<span class="pl-c"><span class="pl-c">//</span> we can access both `a` and `b` here</span>
+		<span class="pl-en">console</span>.<span class="pl-c1">log</span>( a <span class="pl-k">+</span> b );	<span class="pl-c"><span class="pl-c">//</span> 3</span>
+	}
+
+	<span class="pl-en">inner</span>();
+
+	<span class="pl-c"><span class="pl-c">//</span> we can only access `a` here</span>
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>( a );			<span class="pl-c"><span class="pl-c">//</span> 1</span>
+}
+
+<span class="pl-en">outer</span>();</pre></div>
+<p>Lexical scope rules say that code in one scope can access variables of either that scope or any scope outside of it.</p>
+<p>So, code inside the <code>inner()</code> function has access to both variables <code>a</code> and <code>b</code>, but code in <code>outer()</code> has access only to <code>a</code> -- it cannot access <code>b</code> because that variable is only inside <code>inner()</code>.</p>
+<p>Recall this code snippet from earlier:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">TAX_RATE</span> <span class="pl-k">=</span> <span class="pl-c1">0.08</span>;
+
+<span class="pl-k">function</span> <span class="pl-en">calculateFinalPurchaseAmount</span>(<span class="pl-smi">amt</span>) {
+	<span class="pl-c"><span class="pl-c">//</span> calculate the new amount with the tax</span>
+	amt <span class="pl-k">=</span> amt <span class="pl-k">+</span> (amt <span class="pl-k">*</span> <span class="pl-c1">TAX_RATE</span>);
+
+	<span class="pl-c"><span class="pl-c">//</span> return the new amount</span>
+	<span class="pl-k">return</span> amt;
+}</pre></div>
+<p>The <code>TAX_RATE</code> constant (variable) is accessible from inside the <code>calculateFinalPurchaseAmount(..)</code> function, even though we didn't pass it in, because of lexical scope.</p>
+<p><strong>Note:</strong> For more information about lexical scope, see the first three chapters of the <em>Scope &amp; Closures</em> title of this series.</p>
+<h2><a id="user-content-practice" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#practice"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Practice</h2>
+<p>There is absolutely no substitute for practice in learning programming. No amount of articulate writing on my part is alone going to make you a programmer.</p>
+<p>With that in mind, let's try practicing some of the concepts we learned here in this chapter. I'll give the "requirements," and you try it first. Then consult the code listing below to see how I approached it.</p>
+<ul>
+<li>Write a program to calculate the total price of your phone purchase. You will keep purchasing phones (hint: loop!) until you run out of money in your bank account. You'll also buy accessories for each phone as long as your purchase amount is below your mental spending threshold.</li>
+<li>After you've calculated your purchase amount, add in the tax, then print out the calculated purchase amount, properly formatted.</li>
+<li>Finally, check the amount against your bank account balance to see if you can afford it or not.</li>
+<li>You should set up some constants for the "tax rate," "phone price," "accessory price," and "spending threshold," as well as a variable for your "bank account balance.""</li>
+<li>You should define functions for calculating the tax and for formatting the price with a "$" and rounding to two decimal places.</li>
+<li><strong>Bonus Challenge:</strong> Try to incorporate input into this program, perhaps with the <code>prompt(..)</code> covered in "Input" earlier. You may prompt the user for their bank account balance, for example. Have fun and be creative!</li>
+</ul>
+<p>OK, go ahead. Try it. Don't peek at my code listing until you've given it a shot yourself!</p>
+<p><strong>Note:</strong> Because this is a JavaScript book, I'm obviously going to solve the practice exercise in JavaScript. But you can do it in another language for now if you feel more comfortable.</p>
+<p>Here's my JavaScript solution for this exercise:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">SPENDING_THRESHOLD</span> <span class="pl-k">=</span> <span class="pl-c1">200</span>;
+<span class="pl-k">const</span> <span class="pl-c1">TAX_RATE</span> <span class="pl-k">=</span> <span class="pl-c1">0.08</span>;
+<span class="pl-k">const</span> <span class="pl-c1">PHONE_PRICE</span> <span class="pl-k">=</span> <span class="pl-c1">99.99</span>;
+<span class="pl-k">const</span> <span class="pl-c1">ACCESSORY_PRICE</span> <span class="pl-k">=</span> <span class="pl-c1">9.99</span>;
+
+<span class="pl-k">var</span> bank_balance <span class="pl-k">=</span> <span class="pl-c1">303.91</span>;
+<span class="pl-k">var</span> amount <span class="pl-k">=</span> <span class="pl-c1">0</span>;
+
+<span class="pl-k">function</span> <span class="pl-en">calculateTax</span>(<span class="pl-smi">amount</span>) {
+	<span class="pl-k">return</span> amount <span class="pl-k">*</span> <span class="pl-c1">TAX_RATE</span>;
+}
+
+<span class="pl-k">function</span> <span class="pl-en">formatAmount</span>(<span class="pl-smi">amount</span>) {
+	<span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">"</span>$<span class="pl-pds">"</span></span> <span class="pl-k">+</span> <span class="pl-smi">amount</span>.<span class="pl-en">toFixed</span>( <span class="pl-c1">2</span> );
+}
+
+<span class="pl-c"><span class="pl-c">//</span> keep buying phones while you still have money</span>
+<span class="pl-k">while</span> (amount <span class="pl-k">&lt;</span> bank_balance) {
+	<span class="pl-c"><span class="pl-c">//</span> buy a new phone!</span>
+	amount <span class="pl-k">=</span> amount <span class="pl-k">+</span> <span class="pl-c1">PHONE_PRICE</span>;
+
+	<span class="pl-c"><span class="pl-c">//</span> can we afford the accessory?</span>
+	<span class="pl-k">if</span> (amount <span class="pl-k">&lt;</span> <span class="pl-c1">SPENDING_THRESHOLD</span>) {
+		amount <span class="pl-k">=</span> amount <span class="pl-k">+</span> <span class="pl-c1">ACCESSORY_PRICE</span>;
+	}
+}
+
+<span class="pl-c"><span class="pl-c">//</span> don't forget to pay the government, too</span>
+amount <span class="pl-k">=</span> amount <span class="pl-k">+</span> <span class="pl-en">calculateTax</span>( amount );
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(
+	<span class="pl-s"><span class="pl-pds">"</span>Your purchase: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> <span class="pl-en">formatAmount</span>( amount )
+);
+<span class="pl-c"><span class="pl-c">//</span> Your purchase: $334.76</span>
+
+<span class="pl-c"><span class="pl-c">//</span> can you actually afford this purchase?</span>
+<span class="pl-k">if</span> (amount <span class="pl-k">&gt;</span> bank_balance) {
+	<span class="pl-en">console</span>.<span class="pl-c1">log</span>(
+		<span class="pl-s"><span class="pl-pds">"</span>You can't afford this purchase. :(<span class="pl-pds">"</span></span>
+	);
+}
+<span class="pl-c"><span class="pl-c">//</span> You can't afford this purchase. :(</span></pre></div>
+<p><strong>Note:</strong> The simplest way to run this JavaScript program is to type it into the developer console of your nearest browser.</p>
+<p>How did you do? It wouldn't hurt to try it again now that you've seen my code. And play around with changing some of the constants to see how the program runs with different values.</p>
+<h2><a id="user-content-review" class="anchor" aria-hidden="true" href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#review"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
+<p>Learning programming doesn't have to be a complex and overwhelming process. There are just a few basic concepts you need to wrap your head around.</p>
+<p>These act like building blocks. To build a tall tower, you start first by putting block on top of block on top of block. The same goes with programming. Here are some of the essential programming building blocks:</p>
+<ul>
+<li>You need <em>operators</em> to perform actions on values.</li>
+<li>You need values and <em>types</em> to perform different kinds of actions like math on <code>number</code>s or output with <code>string</code>s.</li>
+<li>You need <em>variables</em> to store data (aka <em>state</em>) during your program's execution.</li>
+<li>You need <em>conditionals</em> like <code>if</code> statements to make decisions.</li>
+<li>You need <em>loops</em> to repeat tasks until a condition stops being true.</li>
+<li>You need <em>functions</em> to organize your code into logical and reusable chunks.</li>
+</ul>
+<p>Code comments are one effective way to write more readable code, which makes your program easier to understand, maintain, and fix later if there are problems.</p>
+<p>Finally, don't neglect the power of practice. The best way to learn how to write code is to write code.</p>
+<p>I'm excited you're well on your way to learning how to code, now! Keep it up. Don't forget to check out other beginner programming resources (books, blogs, online training, etc.). This chapter and this book are a great start, but they're just a brief introduction.</p>
+<p>The next chapter will review many of the concepts from this chapter, but from a more JavaScript-specific perspective, which will highlight most of the major topics that are addressed in deeper detail throughout the rest of the series.</p>
+</article>
+  </div>
+
+    </div>
+
+  
+
+  <details class="details-reset details-overlay details-overlay-dark">
+    <summary data-hotkey="l" aria-label="Jump to line" aria-haspopup="dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast linejump" aria-label="Jump to line" role="dialog">
+      <!-- '"` --><!-- </textarea></xmp> --><form class="js-jump-to-line-form Box-body d-flex" action="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+        <input class="form-control flex-auto mr-3 linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line…" aria-label="Jump to line" autofocus="">
+        <button type="submit" class="btn" data-close-dialog="">Go</button>
+</form>    </details-dialog>
+  </details>
+
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </main>
+  </div>
+  
+
+  </div>
+
+        
+<div class="footer container-lg width-full px-3" role="contentinfo">
+  <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap ">
+      <li class="mr-3">© 2019 <span title="0.18814s from unicorn-5875f4bf96-6cfcl">GitHub</span>, Inc.</li>
+        <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to security, text:security" href="https://github.com/security">Security</a></li>
+        <li class="mr-3"><a href="https://githubstatus.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com/">Help</a></li>
+    </ul>
+
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon mx-lg-4" href="https://github.com/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+   <ul class="list-style-none d-flex flex-wrap ">
+        <li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+        <li class="mr-3"><a href="https://github.com/pricing" data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
+      <li class="mr-3"><a href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3"><a href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</a></li>
+        <li class="mr-3"><a href="https://github.blog/" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
+
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+
+    
+    <script crossorigin="anonymous" integrity="sha512-dzqG8DuQd3OSarPuVaMLMFFNxrbW9EJtW6qktijE30pbutjd9UfTw9d27ClH0V1RqXEUblCVSNv4qyYML++c9w==" type="application/javascript" src="./js_files/frameworks-835b8a13.js.download"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-fA/ynyZLy1YXH02Ezerjv7yYksGJaDzq2gwxZwOI+F6taU1CyUaPyJC2kahm5nKKyWO4vck9A61eGnWx/Rgt4g==" type="application/javascript" src="./js_files/github-bootstrap-25105b6e.js.download"></script>
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md">Reload</a> to refresh your session.</span>
+  </div>
+  <template id="site-details-dialog"></template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+  <div aria-live="polite" class="js-global-screen-reader-notice sr-only"></div>
+
+  
+
+
+</body></html>

@@ -1,0 +1,51 @@
+var fruitsList=['pears', 'kiwi', 'pormegranate', 'banana']
+
+function printfruits(fruitsList){
+for(var i=0; i<fruitsList.length; i++){
+console.log(fruitsList[i]);
+}
+}
+undefined
+printfruits(fruitsList)
+pears debugger eval code:3:1
+kiwi debugger eval code:3:1
+pormegranate debugger eval code:3:1
+banana debugger eval code:3:1
+undefined
+function getName(){
+  return "Zakia Mustafa"
+}
+undefined
+getName()
+"Zakia Mustafa"
+function setName(myName){
+ return "Zakia";
+}
+undefined
+setName(myName)
+ReferenceError: myName is not defined[Learn More] debugger eval code:1:1
+var name="Zakia Mustafa"
+undefined
+function setName(myName){
+   return myName;
+}
+undefined
+console.log(setName(name));
+Zakia Mustafa
+
+
+
+
+
+
+var fruitsList=['pears', 'kiwi', 'pormegranate', 'banana']
+undefined
+function getFruit(index,fruit){
+  return fruit[index]
+}
+undefined
+getFruit(2,fruitsList);
+"pormegranate"
+
+
+

@@ -1,0 +1,22 @@
+html{background-color: gray;}
+ body{background-color: pink; 
+ 	}
+ 
+<p{background-color:orange;}
+h1{background-color:blue;
+	width:600px;
+	border: 2px solid gray;
+	margin: 3px 50px; }
+body{background-image: url("slavery.jpg");}
+.image img{ 
+	width: 300px;
+	border: 1px solid orange;
+	margin: 10px  50px ;
+
+ }
+h2{background-color: gray;
+	width: 400px;
+	margin: 5px 20px 20px 40px;
+	border:1px solid white;
+	background-color: gray;
+}

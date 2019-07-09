@@ -1,0 +1,8 @@
+body{ 
+ background-image: url(".../img/arrow.jpg"), url(".../img/green.jpg"); }
+
+
+.chem{background-color:#ffffff;
+	width:800px;
+	margin:40px auto;
+	font-size: 20px;}
